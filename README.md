@@ -1,0 +1,15 @@
+# Data cleaner bundle
+
+The DataCleanerBundle provides integration of the DataCleaner library into the Symfony framework.
+
+## Running code fixer
+
+Run php cs fixer `./vendor/bin/php-cs-fixer fix`
+
+## Running the tests
+
+Run tests with phpunit `./vendor/bin/phpunit`
+
+## Running analyzer
+
+Run phan `./vendor/bin/phan`

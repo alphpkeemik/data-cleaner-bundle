@@ -1,0 +1,15 @@
+services:
+    Ambientia\DataCleaner\DataCleaner:
+        arguments:
+            - '@doctrine'
+            - '@serializer'
+            # inject all services tagged with ambientia.data_cleaner_provider
+            - !tagged ambientia.data_cleaner_provider
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: data-cleaner}
+
+    Ambientia\DataCleaner\DataCleanerCommand:
+        calls:
+            - [setDataCleaner, ['@Ambientia\DataCleaner\DataCleaner']]
+        tags: ['console.command']
