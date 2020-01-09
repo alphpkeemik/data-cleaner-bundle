@@ -4,3 +4,4 @@ monolog:
             type:  rotating_file
             path:  "%kernel.logs_dir%/data-cleaner.log"
             channels: data-cleaner
+            max_files: 10
