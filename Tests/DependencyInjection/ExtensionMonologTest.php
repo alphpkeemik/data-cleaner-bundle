@@ -2,8 +2,6 @@
 
 /*
  * This file is part of the Ambientia DataCleaner package.
- *
- * (c) Ambientia Estonia OÜ
  */
 
 namespace Ambientia\DataCleanerBundle\Tests\DependencyInjection;
@@ -30,7 +28,8 @@ class ExtensionMonologTest extends TestCase
                     'data-cleaner' => [
                         'type' => 'rotating_file',
                         'path' => "%kernel.logs_dir%/data-cleaner.log",
-                        'channels' => 'data-cleaner'
+                        'channels' => 'data-cleaner',
+                        'max_files' => 10,
                     ]
                 ]
             ]
